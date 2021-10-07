@@ -1,0 +1,162 @@
+body{
+
+    background-color: black;
+
+}
+
+p{
+    font-size: 1rem;
+  }
+  
+  #navbar {
+    position: fixed;
+    height: 5vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(211, 211, 211, 80%);
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+  }
+  
+  #navbar a{
+    color: black;
+    align-self: center;
+  }
+  
+#github-icon, #linkedin-icon{
+
+    height: 3vh;
+    
+}
+
+  #welcome-section{
+
+    color: white;
+
+    width: 100%;
+    padding-top: 0;
+    margin-top: 0;
+    display: block;
+    background-image: url("./Images/Dark_Hexagons.jpg");
+    background-size: cover;
+    display: grid;
+    grid-template-areas:
+    
+        "mypic myinfo languages";
+  }
+  
+  #my-info{
+      grid-area: myinfo;
+      align-items: center;
+      margin:15vh 5vw;
+    }
+    
+    #my-name{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    
+    #my-pic{  
+        max-width: 30vw;
+        border-radius: 50%;
+        margin-left: 5vw;
+        grid-area: mypic;
+        align-self: center;
+    }
+    
+    #language-container{
+        grid-area: languages;
+        align-self: center;
+    }
+    
+  #languages {
+    
+
+    max-width: 25vw;
+    margin-right: 5vw;
+    display: flex;
+    gap: 10px;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+
+    
+  }
+
+  .language-icon{
+    justify-content: center;
+    max-width: 25%;
+  }
+
+  
+  
+  #projects {
+      
+      border-top: solid 4vh rgba(211, 211, 211, 40%);
+      
+      padding: 4vh 5vw 4vh 5vw;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 2.5vh 2.5vw;
+      
+      background-image: url(Images/Dark_Bricks.jpg);
+      background-size: cover;
+      
+      align-content: center;
+      
+    }
+    
+    .project-tile{
+        background: rgba(211, 211, 211, 40%);
+        padding: 0 2.5vw 0 5vh;
+        border-radius: 20%;
+        height: 90%;
+    }
+    
+    .project-tile h3 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .project-img{
+      height: 60%;
+      width: 100%;
+      border-radius: 20%;
+      margin-bottom: 3vh;
+    }
+
+  .project-tile a {
+      color: black;
+      font-size: 1.4rem;
+      font-weight: 500;
+  }
+
+  @media screen and (max-width: 1200px){
+      
+    .project-img{
+        height: 50%;
+    }
+  }
+
+  
+  @media screen and (max-width: 1000px){
+      
+    .project-img{
+        height: 60%;
+    }
+
+    #projects {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 2%;
+    }
+    
+  }
