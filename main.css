@@ -115,9 +115,9 @@ p{
     }
     
     .project-tile{
-        background: rgba(211, 211, 211, 40%);
-        padding: 0 2.5vw 0 5vh;
-        border-radius: 20%;
+        background: rgba(150, 149, 149, 0.5);
+        padding: 0 5% 5% 5%;
+        border-radius: 15%;
         height: 90%;
     }
     
@@ -134,29 +134,63 @@ p{
     }
 
   .project-tile a {
-      color: black;
+      color: white;
       font-size: 1.4rem;
       font-weight: 500;
   }
 
-  @media screen and (max-width: 1200px){
-      
-    .project-img{
-        height: 50%;
-    }
-  }
-
   
-  @media screen and (max-width: 1000px){
-      
-    .project-img{
-        height: 60%;
-    }
+  
 
+  @media screen and (max-width: 1100px){
+      
     #projects {
     grid-template-columns: 100%;
     grid-template-rows: repeat(6, 1fr);
     gap: 2%;
     }
     
+    #project-tile {
+      padding: 0;
+      height: max-content;
+    }
+
+  }
+
+  
+  @media screen and (max-width: 800px){
+      
+
+    #projects {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh 0;
+    width: 100%;    
+  }
+
+    .project-img{
+      height: 60vh;
+      width: 90vw;
+    }
+    
+#welcome-section {
+  padding-top: 7vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3vh;
+}
+
+#my-info {
+  margin: 1vh 0;
+  text-align: center;
+}
+
+
+
+.project-tile{
+  
+  border-radius: 0%;
+  width: 100%;
+
+}
   }
